@@ -8,6 +8,6 @@ RUN npm install
 
 RUN npm run build
 
-EXPOSE 3000
-
 RUN npm start
+
+EXPOSE 3000
