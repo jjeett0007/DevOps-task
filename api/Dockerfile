@@ -6,6 +6,8 @@ WORKDIR /api
 
 COPY requirements.txt requirements.txt
 
+RUN pip install --upgrade pip
+
 RUN pip install -r requirements.txt
 
 # copy from the current directory of the Dockerfile to /api in the image
