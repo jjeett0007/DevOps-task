@@ -26,4 +26,4 @@ services:
       - frontend
 
     volumes:
-      frontend_build
+      frontend_build:
