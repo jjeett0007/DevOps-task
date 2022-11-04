@@ -1,6 +1,14 @@
-FROM python:3.8-alpine
-ENV PYTHONUNBUFFERED 1
+FROM  python:3.8.13-alpine
+
+ENV PYTHONUNBUFFERED=1
+
 WORKDIR /api
+
 COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-COPY . .
+
+RUN pip install -r requirements.txt
+
+# copy from the current directory of the Dockerfile to /api in the image
+COPY . . 
+
+EXPOSE 8000
