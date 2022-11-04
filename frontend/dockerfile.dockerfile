@@ -1,6 +1,13 @@
-FROM node:15.13-alpine
+FROM node:14.17.3
+
 WORKDIR /frontend
+
 COPY . .
-RUN npm i
-RUN npm start
+
+RUN npm install
+
 RUN npm run build
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
