@@ -1,4 +1,4 @@
 FROM node:15.13-alpine
-WORKDIR /
+WORKDIR /frontend
 COPY . .
 RUN npm run build
