@@ -15,3 +15,5 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/frontend
+    command: "npm install"
+    command: "npm start"
